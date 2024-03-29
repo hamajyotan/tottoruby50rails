@@ -6,6 +6,10 @@ class User < ActiveRecordCompose::Model
     models << account << profile
   end
 
+  delegate :id, :persisted?, to: :account
+
+  def to_model = self
+
   private
 
   attr_reader :account, :profile
