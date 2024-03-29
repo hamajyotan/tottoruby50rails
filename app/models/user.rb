@@ -6,6 +6,8 @@ class User < ActiveRecordCompose::Model
     models << account << profile
   end
 
+  validates :age, numericality: { greater_than_or_equal_to: 18 }
+
   delegate :id, :persisted?, to: :account
 
   def to_model = self
