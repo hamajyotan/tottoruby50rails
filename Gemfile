@@ -27,3 +27,5 @@ group :development do
   # gem "spring"
 end
 
+
+gem "active_record_compose", "~> 0.3.1"
